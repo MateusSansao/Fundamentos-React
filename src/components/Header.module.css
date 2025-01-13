@@ -1,0 +1,23 @@
+.header {
+    background: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.header img {
+    height: 2rem;
+}
+
+.header strong {
+    font-size: 2.5rem;
+}
+
+.strongWhite {
+    color: var(--blue-500);
+}
+
+.strongBlue {
+    color: var(--purple-dark-500);
+}
