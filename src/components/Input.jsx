@@ -9,7 +9,7 @@ function Input() {
             </input>
             <button>
                 Criar
-                <IoIosAddCircleOutline />
+                <IoIosAddCircleOutline size={20}/>
             </button>
         </div>
     )
