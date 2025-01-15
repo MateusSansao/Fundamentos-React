@@ -1,0 +1,16 @@
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4rem;
+}
+
+.task header{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    width: 46rem;
+    height: 2.25rem;
+    border-bottom: 1px solid var(--gray-300);
+}

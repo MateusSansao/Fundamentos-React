@@ -1,6 +1,7 @@
 import './global.css'
 import Header from './components/header';
 import Input from './components/Input';
+import Task from './components/Task';
 import styles from './App.module.css';
 
 function App() {
@@ -11,6 +12,19 @@ function App() {
 
       <div className={styles.container}>
         <Input/>
+      </div>
+
+      <div className={styles.task}>
+
+        <header>
+          <p>Tarefas criadas 0</p>
+          <p>Concluídas 0</p>
+        </header>
+
+        <div>
+          <Task/>
+        </div>
+
       </div>
     </div>
   )
