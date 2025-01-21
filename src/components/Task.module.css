@@ -1,6 +1,35 @@
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 46rem;
+    height: 4.5rem;
+    background: var(--gray-500);
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    padding: 1rem;
+}
+
+.container p {
+    font-size: 0.875rem;
+    font-family: Inter;
+}
+
+.container .iconExcluir {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--gray-300);
+    cursor: pointer;
+}
+
+.container .iconCheck {
+    width: 1.2rem;
+    height: 1.2rem;
+    color: var(--blue-500);
+    cursor: pointer;
+}
+
+.container .paragrafo {
+    width: 100%;
+    text-align: left;
 }
