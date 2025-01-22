@@ -5,8 +5,6 @@ import { CgTrash } from "react-icons/cg";
 function Task({text, deleteComente}) {
 
     function handleDeleteComment() {
-        console.log('deletar')
-
         deleteComente(text)
     }
 

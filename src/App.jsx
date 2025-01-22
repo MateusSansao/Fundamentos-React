@@ -7,16 +7,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [posts , setPosts] = useState([
-    { 
-      id: 1, 
-      text: "Tarefa 1",
-    },
-    {
-      id: 2,
-      text: "Tarefa 2",
-    }
-  ]);
+  const [posts , setPosts] = useState([]);
 
   const adicionarTarefa = (novaTarefa) => {
     if (novaTarefa.trim()) {
@@ -29,8 +20,12 @@ function App() {
     }
   };
 
-  function deleteComente(text) {
-    console.log(`Deletar comentario ${text}`)
+  function deleteComente(textToDelete) {
+    const filterText = posts.filter(posts => {
+      return posts.text != textToDelete;
+    })
+
+    setPosts(filterText);
   }
 
   return (
