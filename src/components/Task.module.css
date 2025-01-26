@@ -10,6 +10,15 @@
     padding: 1rem;
 }
 
+.container button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .container p {
     font-size: 0.875rem;
     font-family: Inter;
@@ -32,4 +41,13 @@
 .container .paragrafo {
     width: 100%;
     text-align: left;
+    font-size: 0.875rem;
+}
+
+.container .paragrafoP {
+    width: 100%;
+    text-align: left;
+    font-size: 0.875rem;
+    text-decoration: line-through;
+    color: var(--gray-300);
 }

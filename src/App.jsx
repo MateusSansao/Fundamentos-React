@@ -5,9 +5,11 @@ import Task from './components/Task';
 import styles from './App.module.css';
 import { useState } from 'react';
 
-function App() {
+function App({}) {
 
-  const [posts , setPosts] = useState([]);
+  const [taskCheck, setTaskCheck] = useState(0);
+  const [taskconclusion, setTaskConclusion] = useState(0);
+  const [posts, setPosts] = useState([]);
 
   const adicionarTarefa = (novaTarefa) => {
     if (novaTarefa.trim()) {
@@ -17,6 +19,8 @@ function App() {
       };
 
       setPosts([...posts, novoPost]);
+
+      setTaskCheck(taskCheck + 1);
     }
   };
 
@@ -26,7 +30,13 @@ function App() {
     })
 
     setPosts(filterText);
+
+    setTaskCheck(taskCheck - 1);
   }
+
+  const updateTaskConclusion = (increment) => {
+    setTaskConclusion((prev) => prev + increment);
+  };
 
   return (
     <div>
@@ -39,12 +49,23 @@ function App() {
       <div className={styles.task}>
 
         <header>
-          <p>Tarefas criadas 0</p>
-          <p>Concluídas 0</p>
+          <div>
+            <p>Tarefas criadas</p>
+            <span>
+              {taskCheck}
+            </span>
+          </div>
+
+          <div>
+            <p>Concluídas</p>
+            <span className={styles.spanCompleted}>
+              {taskconclusion} de {taskCheck}
+            </span>
+          </div>
         </header>
 
        {posts.map((posts) => (
-          <Task key={posts.id} text={posts.text} deleteComente={deleteComente}/>
+          <Task key={posts.id} text={posts.text} deleteComente={deleteComente} updateTaskConclusion={updateTaskConclusion}/>
         ))}
 
       </div>
